@@ -1,0 +1,18 @@
+.jokeDetailsContenair {
+  justify-content: flex-start;
+  padding: 1rem 1.3rem;
+
+  .jokedetailsStyles {
+    font-size: .72em;
+    line-height: 150%;
+    color: $neutre
+  };
+
+  & > img{
+    margin-right: .5rem;
+    width: 2.7rem
+  }
+  a{
+    color: $neutre
+  }
+};

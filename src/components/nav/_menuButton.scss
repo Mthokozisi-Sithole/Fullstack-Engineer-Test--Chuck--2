@@ -1,0 +1,65 @@
+.toggleBtn{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background-color: $dark;
+  color: $light;
+  position: relative;
+  margin-bottom: 0.6rem;
+  @extend %fast-transition;
+
+  span{
+    height: 2px;
+    width: 50%;
+    background-color: $main-color;
+    position: relative;
+
+    &::after, &::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: $main-color;
+      @extend %fast-transition;
+    }
+    &::after{
+      top: 5px;
+    }
+    &::before{
+      top: -5px;
+    }
+
+  }
+  input {
+    position: absolute;
+    z-index: 10023;
+    width:  85%;
+    height: 85%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+
+  &.a{
+    transform: rotate(135deg);
+
+    &:hover{
+      transform: rotate(225deg);
+      
+    }
+    span{
+      background-color: $neutre;
+
+      &::after{
+        transform: rotate(90deg)
+      }
+      &::after, &::before {
+        top: 0;
+        background-color: $neutre;
+      }
+      
+    }
+  }
+}

@@ -1,0 +1,66 @@
+$bg-color: #0e0e0e;
+$main-color: #e0e0e0;
+$primary: dodgerblue;
+$secondary: pink;
+$neutre: rgb(155, 155, 155);
+$dark: #222;
+$dark-transparent: rgba(34, 34, 34, 0.619);
+$light: #f4f4f4;
+$shadow-color: rgba(0,0,0,.08);
+$bg-color: #0e0e0e;
+$bg-color-transparent: #0e0e0e60;
+$fast-speed: 0.3s;
+
+%fast-transition {
+	transition: all $fast-speed ease-in-out 0s;
+	-webkit-transition: all $fast-speed ease-in-out 0s;
+	-moz-transition: all $fast-speed ease-in-out 0s;
+	-ms-transition: all $fast-speed ease-in-out 0s;
+	-o-transition: all $fast-speed ease-in-out 0s;
+}
+%circle {
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+}
+%shadow {
+	box-shadow: 0 0 .5rem 0 $dark-transparent;
+}
+// set color
+@function set-text-color($bg-clr) {
+	@if (lightness($bg-clr) < 38) {
+		@return $main-color;
+	} @else {
+		@return $bg-color;
+	}
+}
+
+// set background color and color
+
+@mixin set-bg($bg-color) {
+	background-color: $bg-color;
+	color: set-text-color($bg-color);
+}
+
+
+
+// media queries
+@mixin XSmallScreen {
+  @media screen and (max-width: 490px) {
+    @content;
+  }
+}
+@mixin smallScreen {
+  
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediumScreen {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}

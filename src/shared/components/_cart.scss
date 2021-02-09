@@ -1,0 +1,13 @@
+.cart{
+  @extend %shadow;
+  @extend %fast-transition;
+  background-color: $dark-transparent;
+  border-left: 8px solid $primary;
+  border-right: 8px solid $primary;
+  overflow: hidden;
+  border-radius: 10px;
+  
+  &:hover{
+    transform: scale(1.01)
+  }
+}

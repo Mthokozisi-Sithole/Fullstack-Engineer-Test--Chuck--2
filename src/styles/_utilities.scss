@@ -1,0 +1,40 @@
+
+
+
+.superbold {
+  font-family: "Holtwood One SC", serif;
+  line-height: 100%;
+  letter-spacing: 0.3rem;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenair{
+	width: 75%;
+}
+
+
+// margin & padding classes
+$MPranges: (1, 2, 3, 4, 5, 6, 7);
+@each $r in $MPranges {
+	.m-#{$r} {
+		margin: #{$r}rem;
+	}
+	.my-#{$r} {
+		margin: #{$r}rem 0;
+	}
+	.mx-#{$r} {
+		margin: 0 #{$r}rem;
+	}
+	.p-#{$r} {
+		padding: #{$r}rem;
+	}
+	.py-#{$r} {
+		padding: #{$r}rem 0;
+	}
+	.px-#{$r} {
+		padding: 0 #{$r}rem;
+	}
+}

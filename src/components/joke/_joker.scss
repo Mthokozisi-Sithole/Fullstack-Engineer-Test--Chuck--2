@@ -1,0 +1,21 @@
+.jokerContenair{
+  flex: 1;
+  position: relative;
+  .jokeHeader {
+    padding: .7rem 1.3rem;
+    font-size: .8rem;
+    color: $secondary;
+    border-bottom: 1px solid $dark;
+  }
+  .mainParagraph {
+    padding: .8rem 1.3rem;
+    font-size: 1rem;
+    line-height: 150%;
+    border-bottom: 1px solid $dark;
+  };
+
+  
+  
+}
+
+

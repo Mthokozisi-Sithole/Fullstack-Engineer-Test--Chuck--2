@@ -1,0 +1,63 @@
+@include XSmallScreen {
+  header {
+    background: linear-gradient(to top, $bg-color, $bg-color-transparent),url('https://images.pexels.com/photos/1599980/pexels-photo-1599980.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat fixed center center/cover;
+    height: 75vh;
+    
+    .slogan {
+      align-self: center;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+    .sloganParagraph {
+      align-self: center;
+      font-size: .9rem;
+      text-align: center;
+    };
+  }
+  .cart{
+    border-right: none;
+    border-left: none;
+    border-bottom: 4px solid $primary;
+    border-top: 4px solid $primary;
+    
+  }
+  .contenair{
+    width: 78%;
+  }
+  .rightSider{
+    margin-bottom: 30vh
+  
+  }
+}
+@include smallScreen {
+    header {
+      background: linear-gradient(to top, $bg-color, $bg-color-transparent),url('https://images.pexels.com/photos/1599980/pexels-photo-1599980.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat fixed center center/cover;
+      height: 60vh;
+      min-height: 300px;
+      .slogan {
+        font-size: 2.7rem;
+      }
+    }
+    main {
+      height: auto;
+    }
+    header p {
+      font-size: 1rem;
+    }
+    main {
+      flex-direction: column;
+    }
+    .rightSider{
+      margin-bottom: 20vh
+    
+    }
+  
+}
+
+@include mediumScreen {
+  header {
+    .slogan {
+      font-size: 3.7rem;
+    }
+  }
+}
